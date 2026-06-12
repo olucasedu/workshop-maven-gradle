@@ -18,7 +18,7 @@ O Java precisa estar na versão 17.
 ## Etapa 1 — Clonar e rodar o build inicial
 
 ```bash
-git clone https://github.com/<usuario>/workshop-maven-gradle.git
+git clone https://github.com/VlNlSHOW/workshop-maven-gradle.git
 ```
 
 ### Time Maven
