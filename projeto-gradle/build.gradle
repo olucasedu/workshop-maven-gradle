@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'br.ufu.tms'
+version = '1.0'
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(17) }
+}
+
+repositories {
+    mavenCentral()
+}
+
+// ETAPA 2: a dependência org.json entra aqui, dentro de dependencies { }
+dependencies {
+}
+
+// gera um jar executável COM as dependências dentro (fat jar)
+jar {
+    manifest { attributes 'Main-Class': 'br.ufu.tms.App' }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
