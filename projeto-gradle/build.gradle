@@ -13,11 +13,10 @@ repositories {
     mavenCentral()
 }
 
-// ETAPA 2: a dependência org.json entra aqui, dentro de dependencies { }
 dependencies {
+    implementation 'org.json:json:20240303'
 }
 
-// gera um jar executável COM as dependências dentro (fat jar)
 jar {
     manifest { attributes 'Main-Class': 'br.ufu.tms.App' }
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
